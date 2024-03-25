@@ -1,6 +1,13 @@
 ## 汉化修复中文端bug，优化距离显示
 
 ![](image.png)
+
+# 安装
+1. [下载链接](https://github.com/Noeek/Quiver/archive/refs/heads/main.zip) （总是最新）
+2. 解压zip文件
+3. 更改文件名为 `Quiver`
+4. 移动插件文件夹至 `<WoW install>/Interface/AddOns/`
+5. 重启游戏.
 ##
 WoW 1.12.1 addon for Hunters. Use `/Quiver` or `/qq` to open the configuration menu.
 
@@ -90,13 +97,6 @@ Shows the Tranquilizing Shot cooldown of every hunter. Announces when casting Tr
 </table>
 
 This checks if you have Trueshot Aura talented. If so, Quiver tracks the buff and duration, and warns you to recast it.
-
-# Installation
-1. [Download](https://github.com/SabineWren/Quiver/releases) latest version
-2. Extract the Zip file
-3. Change the folder name to `Quiver`
-4. Move folder into `<WoW install>/Interface/AddOns/`
-5. Restart WoW.
 
 # Possible Future Features
 Ideas for where Quiver could go, and open to discussion.
