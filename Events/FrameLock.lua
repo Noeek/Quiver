@@ -130,9 +130,11 @@ Quiver_Event_FrameLock_SideEffectMakeMoveable = function(f, store)
 	f:SetMaxResize(sw/2, sh/2)
 
 	local xMax = sw - store.FrameMeta.W
-	local yMax = sh - store.FrameMeta.H
+	-- enlarge moveable area
+	local yMax = sh - store.FrameMeta.H + 200
 	local x = absClamp(store.FrameMeta.X, xMax)
 	local y = -1 * absClamp(store.FrameMeta.Y, yMax)
+
 	f:SetPoint("TopLeft", nil, "TopLeft", x, y)
 	f:SetScript("OnMouseDown", function()
 		if not Quiver_Store.IsLockedFrames then f:StartMoving() end
@@ -143,7 +145,7 @@ Quiver_Event_FrameLock_SideEffectMakeMoveable = function(f, store)
 		store.FrameMeta.X = math.floor(x)
 		store.FrameMeta.Y = math.floor(y)
 		f:SetPoint("TopLeft", nil, "TopLeft", store.FrameMeta.X, store.FrameMeta.Y)
-		DEFAULT_CHAT_FRAME:AddMessage("resize " .. store.FrameMeta.X)
+		DEFAULT_CHAT_FRAME:AddMessage("resize " .. store.FrameMeta.X..","..store.FrameMeta.Y)
 	end)
 
 	addFrameMoveable(f)
