@@ -31,6 +31,7 @@ local createUI = function()
 	f:SetBackdropBorderColor(0.25, 0.25, 0.25, 1)
 
 	local fs = f:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+	fs:SetFont("Fonts\\FRIZQT__.TTF", 15)
 	fs:SetAllPoints(f)
 	fs:SetJustifyH("Center")
 	fs:SetJustifyV("Center")
