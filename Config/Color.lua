@@ -30,11 +30,11 @@ Quiver_Config_Colors = function(parent, gap)
 	local wrap = Quiver_Component_ColorPicker_WrapColor
 	local colorShoot = wrap(storeAutoShotTimer, "ColorShoot", QUIVER.ColorDefault.AutoShotShoot)
 	local colorReload = wrap(storeAutoShotTimer, "ColorReload", QUIVER.ColorDefault.AutoShotReload)
-	local optionShoot = Quiver_Component_ColorPicker_WithResetLabel(f, "Shooting", colorShoot)
-	local optionReload = Quiver_Component_ColorPicker_WithResetLabel(f, "Reloading", colorReload)
+	local optionShoot = Quiver_Component_ColorPicker_WithResetLabel(f, QUIVER_T.ShootingState.Shooting, colorShoot)
+	local optionReload = Quiver_Component_ColorPicker_WithResetLabel(f, QUIVER_T.ShootingState.Reloading, colorReload)
 
 	local frames = {
-		Quiver_Component_ColorPicker_WithResetLabel(f, "Casting",
+		Quiver_Component_ColorPicker_WithResetLabel(f, QUIVER_T.ShootingState.Casting,
 			wrap(storeCastbar, "ColorCastbar", QUIVER.ColorDefault.Castbar)),
 		optionShoot,
 		optionReload,

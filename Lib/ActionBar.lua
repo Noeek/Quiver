@@ -25,15 +25,15 @@ Quiver_Lib_ActionBar_FindSlot = function(callerName)
 		local texture = Quiver_Lib_Spellbook_TryFindTexture(nameSeek)
 		table.insert(requiredSpells, nameSeek)
 		if texture == nil then
-			println.Warning("Can't find in spellbook: "..nameSeek)
+			-- println.Warning("Can't find in spellbook: "..nameSeek)
 			actionBarSlotCache[nameSeek] = 0
 			return 0
 		end
 
 		local slot = tryFindSlot(texture)
 		if slot == nil then
-			println.Warning("Can't find on action bars: "..nameSeek)
-			println.Warning("Searched for texture: "..texture)
+			println.Warning(QUIVER_T.LocaleText.CantFindSpellABar..nameSeek)
+			-- println.Warning("Searched for texture: "..texture)
 			actionBarSlotCache[nameSeek] = 0
 			return 0
 		end

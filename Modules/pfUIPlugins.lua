@@ -11,12 +11,16 @@ pfUI.module[m]()
 
 Quiver_Module_pfUITurtleTrueshot = function()
 	pfUI_locale["enUS"]["customcast"]["TRUESHOT"] = QUIVER_T.Spellbook.Trueshot
+	pfUI_locale["zhCN"]["customcast"]["TRUESHOT"] = "稳固射击"
 	local trueshotName = L["customcast"]["TRUESHOT"]
+	print(trueshotName)
 	-- Copy-pasted from pf's Multi-Shot implementation in libs/libcast.lua
-	libcast.customcast[string.lower(trueshotName)] = function(begin, duration)
+	libcast.customcast[trueshotName] = function(begin, duration)
+	-- libcast.customcast[string.lower(trueshotName)] = function(begin, duration)
 		-- Somehow player isn't defined, but all the other locals from pfUI work
 		local player = UnitName("player")
 		if begin then
+			print(trueshotName)
 			local castTime, start = Quiver_Lib_Spellbook_CalcCastTime(QUIVER_T.Spellbook.Trueshot)
 			local duration = duration or (castTime * 1000)
 			-- add cast action to the database
@@ -27,6 +31,7 @@ Quiver_Module_pfUITurtleTrueshot = function()
 			libcast.db[player].icon = "Interface\\Icons\\Ability_Hunter_SteadyShot"
 			libcast.db[player].channel = nil
 		else
+			print(2)
 			-- remove cast action from the database
 			libcast.db[player].cast = nil
 			libcast.db[player].rank = nil

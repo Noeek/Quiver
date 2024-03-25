@@ -1,3 +1,7 @@
+## 汉化修复中文端bug，优化距离显示
+
+![](image.png)
+##
 WoW 1.12.1 addon for Hunters. Use `/Quiver` or `/qq` to open the configuration menu.
 
 <img src="/Media/Config_UI.jpg" height="462px" align="right">

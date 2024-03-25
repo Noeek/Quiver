@@ -75,9 +75,17 @@ local handleUpdate = function()
 	if checkDistance.Melee() then
 		render(store.ColorMelee, QUIVER_T.Range.Melee)
 	elseif checkDistance.Ranged() then
-		if UnitCreatureType("target") == "Beast" and checkDistance.Scare() then
+		local _,_,MarksmanshipTelentPoint =GetTalentTabInfo(3);
+		if MarksmanshipTelentPoint > 13 then
+			QUIVER_T.Range.Long = "28 - 41"
+			QUIVER_T.Range.Mark = "41 - 100"
+		end
+		if UnitCreatureType("target") == QUIVER_T.LocaleText.Beast and checkDistance.Scare() then
+			QUIVER_T.Range.ScatterShot = "10 - 21"
+			QUIVER_T.Range.Short = "10 - 28"
 			render(store.ColorScareBeast, QUIVER_T.Range.ScareBeast)
 		elseif checkDistance.Scatter() then
+			QUIVER_T.Range.Short = "21 - 28"
 			render(store.ColorScatterShot, QUIVER_T.Range.ScatterShot)
 		elseif checkDistance.Follow() then
 			render(store.ColorShort, QUIVER_T.Range.Short)

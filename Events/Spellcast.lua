@@ -55,7 +55,7 @@ local handleCastByName = function(spellName)
 		local knowsShot = Quiver_Lib_Spellbook.GetIsSpellLearned(shotName)
 		-- Bad code... findSlot has side effect of printing when a spell isn't on bars
 		if knowsShot and findSlot(shotName) == 0 and spellName == shotName then
-			println.Warning(spellName .. " not on action bars, so can't track cast.")
+			println.Warning(spellName .. QUIVER_T.LocaleText.CastBarText)
 		end
 	end
 

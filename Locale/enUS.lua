@@ -1,4 +1,15 @@
 QUIVER_T = {
+	LocaleText = {
+		Beast = "Beast",
+		SpeedText = "Speed (%d+%.%d+)",
+		CantFindSpellABar = "Can't find on action bars: ",
+		CastBarText = " not on action bars, so can't track cast."
+	},
+	ShootingState = {
+		Casting = "Casting",
+		Shooting = "Shooting",
+		Reloading = "Reloading",
+	},
 	CombatLog = {
 		Consumes = {
 			ManaPotion = "You gain (.*) Mana from Restore Mana.",
@@ -27,14 +38,14 @@ QUIVER_T = {
 		TranqAnnouncer = "Announces in /Raid chat when your tranquilizing shot hits or misses a target.",
 	},
 	Range = {
-		Melee = "Melee Range",
-		DeadZone = "Dead Zone",
-		ScareBeast = "Scare Beast",
-		ScatterShot = "Scatter Shot",
-		Short = "Short Range",
-		Long = "Long Range",
-		Mark = "Hunter's Mark",
-		TooFar = "Out of Range",
+		Melee = "0 - 5",
+		DeadZone = "5 - 8",
+		ScareBeast = "8 - 10",
+		ScatterShot = "8 - 21",
+		Short = "8 - 28",
+		Long = "28 - 35",
+		Mark = "35 - 100",
+		TooFar = "100+",
 	},
 	Spellbook = {
 		-- Aspect
